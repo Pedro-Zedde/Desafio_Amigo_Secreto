@@ -13,7 +13,8 @@ function adicionarAmigo(){
     if (!(nomeAmigo == "")  && !(listaDeAmigos.includes(nomeAmigo))) {
         listaDeAmigos.push(nomeAmigo);
         alterandoTexto("listaAmigos", listaDeAmigos);
-        console.log (listaDeAmigos);
+        //console.log (listaDeAmigos);
+        alterandoTexto("resultado", "");
     }else{
         alert("Por favor digite um nome único e válido.");
     }
@@ -27,12 +28,13 @@ function sortearAmigo() {
         }else{
             alterandoTexto("resultado", "O seu amigo secreto é: " + listaDeAmigos[numeroSecreto]);
             amigoSecreto = listaDeAmigos[numeroSecreto];
-            console.log(amigoSecreto);
+            //console.log(amigoSecreto);
             listaSorteados.push(numeroSecreto);
         
         }
     
     }else{
+        alterandoTexto("resultado", "Erro");
         alert("Por favor insira mais nomes para prosseguir.");
     }
 }
